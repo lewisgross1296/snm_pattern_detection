@@ -1,4 +1,4 @@
-cd '/Users/lewisgross/Local_Projects/Trelis/steel_heu_25_25_25'
+cd '/Users/lewisgross/Local_Projects/Trelis/steel_25_25_25'
 create brick x 100 y 100 z 100
 create brick x 105 y 105 z 105
 subtract volume 1 from volume 2
