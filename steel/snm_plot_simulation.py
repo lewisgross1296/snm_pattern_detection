@@ -1,6 +1,4 @@
 import numpy
-import math as m
-import matplotlib.pyplot as plt
 import os
 import sys
 import PyFrensie.Geometry.DagMC as DagMC
