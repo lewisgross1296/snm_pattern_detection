@@ -14,11 +14,11 @@ if __name__ == "__main__":
                       help="the estimator id to use")
     parser.add_option("--entity_id", type="int", dest="entity_id",
                       help="the entity id to use")
-    parser.add_option("--HEU_X_position", type="string", dest="X",
+    parser.add_option("--HEU_X", type="string", dest="X",
                       help="the position of HEU in the geometry [cm]")
-    parser.add_option("--HEU_Y_position", type="string", dest="Y",
+    parser.add_option("--HEU_Y", type="string", dest="Y",
                       help="the position of HEU in the geometry [cm]")
-    parser.add_option("--HEU_Z_position", type="string", dest="Z",
+    parser.add_option("--HEU_Z", type="string", dest="Z",
                       help="the position of HEU in the geometry [cm]")
     options,args = parser.parse_args()
 
