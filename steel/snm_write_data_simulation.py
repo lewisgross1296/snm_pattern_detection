@@ -30,8 +30,8 @@ def writeSNMSimulationSpectrum( rendezvous_file,
 
     # create CSV output file
     file_name = "snm_results_"
-    date = date.today().strftime("%b-%d-%Y")
-    file = open(file_name + date + ".csv","w+")
+    today = date.today().strftime("%b-%d-%Y")
+    file = open(file_name + today + ".csv","w+")
     # Write the HEU position at the top of the file
     file.write(HEU_X + "," + HEU_Y + "," +  HEU_Z + "\n")
     # Write FRENSIE results to CSV forrmat
