@@ -2,7 +2,7 @@
 import sys, os
 from optparse import *
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-from snm_plot_simulation import plotSNMSimulationSpectrum
+from snm_write_data_simulation import writeSNMSimulationSpectrum
 
 if __name__ == "__main__":
 

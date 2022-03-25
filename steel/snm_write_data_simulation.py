@@ -1,4 +1,3 @@
-import numpy
 import os
 import sys
 from datetime import date
@@ -8,11 +7,11 @@ import PyFrensie.MonteCarlo as MonteCarlo
 import PyFrensie.MonteCarlo.Event as Event
 import PyFrensie.MonteCarlo.Manager as Manager
 
-def plotSNMSimulationSpectrum( rendezvous_file,
+def writeSNMSimulationSpectrum( rendezvous_file,
                                   estimator_id,
                                   entity_id,
                                   HEU_X,
-                                  HEU_Y
+                                  HEU_Y,
                                   HEU_Z):
 
     # Activate just-in-time initialization to prevent automatic loading of the
