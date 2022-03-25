@@ -23,7 +23,7 @@ if __name__ == "__main__":
     options,args = parser.parse_args()
 
     # Plot the spectrum
-    plotSNMSimulationSpectrum( options.rendezvous_file,
+    writeSNMSimulationSpectrum( options.rendezvous_file,
                                   options.estimator_id,
                                   options.entity_id,
                                   options.X,
