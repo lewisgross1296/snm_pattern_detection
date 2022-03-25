@@ -14,9 +14,18 @@ if __name__ == "__main__":
                       help="the estimator id to use")
     parser.add_option("--entity_id", type="int", dest="entity_id",
                       help="the entity id to use")
+    parser.add_option("--HEU_X_position", type="string", dest="X",
+                      help="the position of HEU in the geometry [cm]")
+    parser.add_option("--HEU_Y_position", type="string", dest="Y",
+                      help="the position of HEU in the geometry [cm]")
+    parser.add_option("--HEU_Z_position", type="string", dest="Z",
+                      help="the position of HEU in the geometry [cm]")
     options,args = parser.parse_args()
 
     # Plot the spectrum
     plotSNMSimulationSpectrum( options.rendezvous_file,
                                   options.estimator_id,
-                                  options.entity_id)
+                                  options.entity_id,
+                                  options.X,
+                                  options.Y,
+                                  options.Z)
