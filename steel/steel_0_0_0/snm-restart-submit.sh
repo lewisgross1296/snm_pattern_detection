@@ -1,6 +1,6 @@
 #!/bin/sh
 #SBATCH --partition=pre
-#SBATCH --time=1-00:00:00 
+#SBATCH --time=0-14:00:00 
 #SBATCH --nodes=16
 #SBATCH --ntasks-per-node=5
 #SBATCH --cpus-per-task=4
