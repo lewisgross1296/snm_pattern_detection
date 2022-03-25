@@ -33,7 +33,9 @@ def writeSNMSimulationSpectrum( rendezvous_file,
     today = date.today().strftime("%b-%d-%Y")
     file = open(file_name + today + ".csv","w+")
     # Write the HEU position at the top of the file
+    file.write("HEU X" + "," + "HEU Y" + "," + "HEU Z" "\n")
     file.write(HEU_X + "," + HEU_Y + "," +  HEU_Z + "\n")
+    file.write("time bin upper bound" + "," + "flux mean" + "," + "flux RE"+ "\n")
     # Write FRENSIE results to CSV forrmat
     for i in range(0,len(entity_bin_data["mean"])):
         file.write(str(entity_bin_data["e_bins"][i+1]) + "," +  str(entity_bin_data["mean"][i]) + "," + str(entity_bin_data["re"][i]) +"\n")
