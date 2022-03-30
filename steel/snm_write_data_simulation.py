@@ -7,7 +7,8 @@ import PyFrensie.MonteCarlo as MonteCarlo
 import PyFrensie.MonteCarlo.Event as Event
 import PyFrensie.MonteCarlo.Manager as Manager
 
-def writeSNMSimulationSpectrum( rendezvous_file,
+def writeSNMSimulationSpectrum(   rendezvous_file,
+                                  NPS,
                                   HEU_X,
                                   HEU_Y,
                                   HEU_Z):
@@ -27,17 +28,17 @@ def writeSNMSimulationSpectrum( rendezvous_file,
     # create CSV output file
     file_name = "snm_results_"
     today = date.today().strftime("%b-%d-%Y")
-    file = open(file_name + today + ".csv","w+")
+    file = open(file_name + str(NPS) + today + ".csv","w+")
     # Write the HEU position at the top of the file
     file.write("HEU X" + "," + "HEU Y" + "," + "HEU Z" "\n")
     file.write(HEU_X + "," + HEU_Y + "," +  HEU_Z + "\n")
     # index est corresponds to estimator ID
     # entity ID is just the estimator ID plus 3 due to the way the geometry is generated
-    for est in range(1,6):
-        file.write("detector location: " + detectors.get(est))
+    for est_idx in range(1,6):
+        file.write("detector location: " + detectors.get(est_idx) + "\n")
         # Extract the estimator of interest from FRENSIE
-        estimator = manager.getEventHandler().getEstimator( est )
-        entity_bin_data = estimator.getEntityBinProcessedData( est + 3 )
+        estimator = manager.getEventHandler().getEstimator( est_idx )
+        entity_bin_data = estimator.getEntityBinProcessedData( est_idx + 3 )
         entity_bin_data["e_bins"] = estimator.getTimeDiscretization()
         file.write("time bin upper bound" + "," + "flux mean" + "," + "flux RE"+ "\n")
         # Write FRENSIE results to CSV forrmat

@@ -10,6 +10,8 @@ if __name__ == "__main__":
     parser = OptionParser()
     parser.add_option("--rendezvous_file", type="string", dest="rendezvous_file",
                       help="the rendezvous file to load")
+    parser.add_option("--NPS",type="int",dest="NPS",
+                      help="the number of particles corresponding to the results")
     parser.add_option("--HEU_X", type="string", dest="X",
                       help="the position of HEU in the geometry [cm]")
     parser.add_option("--HEU_Y", type="string", dest="Y",
@@ -19,7 +21,8 @@ if __name__ == "__main__":
     options,args = parser.parse_args()
 
     # Plot the spectrum
-    writeSNMSimulationSpectrum( options.rendezvous_file,
+    writeSNMSimulationSpectrum(   options.rendezvous_file,
+                                  options.NPS,
                                   options.X,
                                   options.Y,
                                   options.Z)
