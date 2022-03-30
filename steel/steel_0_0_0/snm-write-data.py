@@ -10,7 +10,7 @@ if __name__ == "__main__":
     parser = OptionParser()
     parser.add_option("--rendezvous_file", type="string", dest="rendezvous_file",
                       help="the rendezvous file to load")
-    parser.add_option("--NPS",type="int",dest="NPS",
+    parser.add_option("--NPS",type="string",dest="NPS",
                       help="the number of particles corresponding to the results")
     parser.add_option("--HEU_X", type="string", dest="X",
                       help="the position of HEU in the geometry [cm]")
