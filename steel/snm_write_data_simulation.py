@@ -22,7 +22,7 @@ def writeSNMSimulationSpectrum( rendezvous_file,
     # estimator id to location map for printing results
     # TODO keep naming convention? Clash between Eli set up and new coordinate system
     # Fix would basically be to switch east and west
-    detectors = {1:"NW" , 2:"NE", 3:"CC",4:"SW",5:"SE"}
+    detectors = {1:"NE" , 2:"NW", 3:"CC",4:"SE",5:"SW"}
 
     # create CSV output file
     file_name = "snm_results_"
