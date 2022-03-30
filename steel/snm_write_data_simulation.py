@@ -8,8 +8,6 @@ import PyFrensie.MonteCarlo.Event as Event
 import PyFrensie.MonteCarlo.Manager as Manager
 
 def writeSNMSimulationSpectrum( rendezvous_file,
-                                  estimator_id,
-                                  entity_id,
                                   HEU_X,
                                   HEU_Y,
                                   HEU_Z):
@@ -20,13 +18,11 @@ def writeSNMSimulationSpectrum( rendezvous_file,
 
     # Reload the simulation
     manager = Manager.ParticleSimulationManagerFactory( rendezvous_file ).getManager()
-    
-    # Extract the estimator of interest from FRENSIE
-    estimator = manager.getEventHandler().getEstimator( estimator_id )
 
-    entity_bin_data = estimator.getEntityBinProcessedData( entity_id )
-    entity_bin_data["e_bins"] = estimator.getTimeDiscretization()
-
+    # estimator id to location map for printing results
+    # TODO keep naming convention? Clash between Eli set up and new coordinate system
+    # Fix would basically be to switch east and west
+    detectors = {1:"NW" , 2:"NE", 3:"CC",4:"SW",5:"SE"}
 
     # create CSV output file
     file_name = "snm_results_"
@@ -35,8 +31,17 @@ def writeSNMSimulationSpectrum( rendezvous_file,
     # Write the HEU position at the top of the file
     file.write("HEU X" + "," + "HEU Y" + "," + "HEU Z" "\n")
     file.write(HEU_X + "," + HEU_Y + "," +  HEU_Z + "\n")
-    file.write("time bin upper bound" + "," + "flux mean" + "," + "flux RE"+ "\n")
-    # Write FRENSIE results to CSV forrmat
-    for i in range(0,len(entity_bin_data["mean"])):
-        file.write(str(entity_bin_data["e_bins"][i+1]) + "," +  str(entity_bin_data["mean"][i]) + "," + str(entity_bin_data["re"][i]) +"\n")
+    # index est corresponds to estimator ID
+    # entity ID is just the estimator ID plus 3 due to the way the geometry is generated
+    for est in range(1,6):
+        file.write("detector location: " + detectors.get(est))
+        # Extract the estimator of interest from FRENSIE
+        estimator = manager.getEventHandler().getEstimator( est )
+        entity_bin_data = estimator.getEntityBinProcessedData( est + 3 )
+        entity_bin_data["e_bins"] = estimator.getTimeDiscretization()
+        file.write("time bin upper bound" + "," + "flux mean" + "," + "flux RE"+ "\n")
+        # Write FRENSIE results to CSV forrmat
+        for i in range(0,len(entity_bin_data["mean"])):
+            file.write(str(entity_bin_data["e_bins"][i+1]) + "," +  str(entity_bin_data["mean"][i]) + "," + str(entity_bin_data["re"][i]) +"\n")
+    
     file.close()
