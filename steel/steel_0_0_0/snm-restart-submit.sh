@@ -1,10 +1,10 @@
 #!/bin/sh
-#SBATCH --partition=pre
-#SBATCH --time=1-00:00:00 
-#SBATCH --nodes=16
+#SBATCH --partition=cnerg
+#SBATCH --time=7-00:00:00 
+#SBATCH --nodes=8
 #SBATCH --ntasks-per-node=5
 #SBATCH --cpus-per-task=4
-#SBATCH --mem-per-cpu=600
+#SBATCH --mem=600
 #SBATCH --error=snm_%J.err
 #SBATCH --output=snm_%J.out
 #SBATCH --constrain=avx2
