@@ -1,7 +1,7 @@
 #!/bin/sh
 #SBATCH --partition=cnerg
 #SBATCH --time=7-00:00:00 
-#SBATCH --nodes=8
+#SBATCH --nodes=6
 #SBATCH --ntasks-per-node=5
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=600
