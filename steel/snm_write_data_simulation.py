@@ -21,8 +21,7 @@ def writeSNMSimulationSpectrum(   rendezvous_file,
     manager = Manager.ParticleSimulationManagerFactory( rendezvous_file ).getManager()
 
     # estimator id to location map for printing results
-    # TODO keep naming convention? Clash between Eli set up and new coordinate system
-    # Fix would basically be to switch east and west
+    # this convention puts the origin and axes the same as in Treils
     detectors = {1:"NE" , 2:"NW", 3:"CC",4:"SE",5:"SW"}
 
     # create CSV output file
