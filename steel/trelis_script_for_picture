@@ -1,0 +1,22 @@
+# commands to generate geometry 
+# particle graveyard omitted
+# added cylinders to show line source
+create Brick x 100 y 100 z 100
+create Brick x 105 y 105 z 105
+subtract Volume 1 from volume 2
+create Brick x 10 y 20 z 20
+move Volume 4 x 57.5 y 35 z 35
+create Brick x 10 y 20 z 20
+move Volume 5 x 57.5 y -35 z 35
+create Brick x 10 y 20 z 20
+move Volume 6 x 57.5 y 0 z 0
+create Brick x 10 y 20 z 20
+move Volume 7 x 57.5 y 35 z -35
+create Brick x 10 y 20 z 20
+move Volume 8 x 57.5 y -35 z -35
+create Sphere radius 5
+create Cylinder height 67 radius 1
+rotate Volume 10 angle 90 about X include_merged 
+move Volume 10 x -55 y 6.5 z -40
+create Cylinder height 67 radius 1
+move Volume 11 x -55 y -40 z 6.5
