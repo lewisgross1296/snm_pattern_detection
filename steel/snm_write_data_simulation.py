@@ -38,10 +38,10 @@ def writeSNMSimulationSpectrum(   rendezvous_file,
         # Extract the estimator of interest from FRENSIE
         estimator = manager.getEventHandler().getEstimator( est_idx )
         entity_bin_data = estimator.getEntityBinProcessedData( est_idx + 3 )
-        entity_bin_data["e_bins"] = estimator.getTimeDiscretization()
+        entity_bin_data["t_bins"] = estimator.getTimeDiscretization()
         file.write("time bin upper bound" + "," + "flux mean" + "," + "flux RE"+ "\n")
         # Write FRENSIE results to CSV forrmat
         for i in range(0,len(entity_bin_data["mean"])):
-            file.write(str(entity_bin_data["e_bins"][i+1]) + "," +  str(entity_bin_data["mean"][i]) + "," + str(entity_bin_data["re"][i]) +"\n")
+            file.write(str(entity_bin_data["t_bins"][i+1]) + "," +  str(entity_bin_data["mean"][i]) + "," + str(entity_bin_data["re"][i]) +"\n")
     
     file.close()
