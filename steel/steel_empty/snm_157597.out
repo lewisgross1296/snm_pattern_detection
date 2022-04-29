@@ -1,0 +1,38 @@
+Loading model snm.h5m ... Set overlap thickness = 0
+Set numerical precision = 0.001
+done!
+
+Starting to load nuclide data tables ... 
+
+ Loading ACE cross section table 18040.80c from /software/groups/dagmc/opt/misc/MCNP/MCNP_DATA/xdata/endf71x/Ar/18040.710nc ... done.
+
+ Loading ACE cross section table 6000.80c from /software/groups/dagmc/opt/misc/MCNP/MCNP_DATA/xdata/endf71x/C/6000.710nc ... done.
+
+ Loading ACE cross section table 24052.80c from /software/groups/dagmc/opt/misc/MCNP/MCNP_DATA/xdata/endf71x/Cr/24052.710nc ... done.
+
+ Loading ACE cross section table 26056.80c from /software/groups/dagmc/opt/misc/MCNP/MCNP_DATA/xdata/endf71x/Fe/26056.710nc ... done.
+
+ Loading ACE cross section table 25055.80c from /software/groups/dagmc/opt/misc/MCNP/MCNP_DATA/xdata/endf71x/Mn/25055.710nc ... done.
+
+ Loading ACE cross section table 7014.80c from /software/groups/dagmc/opt/misc/MCNP/MCNP_DATA/xdata/endf71x/N/7014.710nc ... done.
+
+ Loading ACE cross section table 28058.80c from /software/groups/dagmc/opt/misc/MCNP/MCNP_DATA/xdata/endf71x/Ni/28058.710nc ... done.
+
+ Loading ACE cross section table 8016.80c from /software/groups/dagmc/opt/misc/MCNP/MCNP_DATA/xdata/endf71x/O/8016.710nc ... done.
+
+ Loading ACE cross section table 15031.80c from /software/groups/dagmc/opt/misc/MCNP/MCNP_DATA/xdata/endf71x/P/15031.710nc ... done.
+
+ Loading ACE cross section table 16032.80c from /software/groups/dagmc/opt/misc/MCNP/MCNP_DATA/xdata/endf71x/S/16032.710nc ... done.
+
+ Loading ACE cross section table 14028.80c from /software/groups/dagmc/opt/misc/MCNP/MCNP_DATA/xdata/endf71x/Si/14028.710nc ... done.
+
+Finished loading nuclide data tables.
+
+Simulation started. 
+
+[1;37;49m Rendezvous 23: [0m160000000000
+
+[1;37;49m Rendezvous 24: [0m170000000000
+
+[1;37;49m Rendezvous 25: [0m180000000000
+
