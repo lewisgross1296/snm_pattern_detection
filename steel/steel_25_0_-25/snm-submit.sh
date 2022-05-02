@@ -4,7 +4,7 @@
 #SBATCH --nodes=8
 #SBATCH --ntasks-per-node=5
 #SBATCH --cpus-per-task=4
-#SBATCH --mem=120000
+#SBATCH --mem=128000
 #SBATCH --error=snm_%J.err
 #SBATCH --output=snm_%J.out
 #SBATCH --constrain=avx2
@@ -22,7 +22,7 @@
 #BIND path to shared data in dagmc group
 BIND_PATH=/software/groups/dagmc/opt/misc/MCNP/MCNP_DATA
 module load openmpi
-mpirun -np $SLURM_NTASKS singularity exec --bind ${BIND_PATH}:${BIND_PATH} frensie_hpc.simg python snm.py --sim_name="snm" --num_particles=1e11 --threads=$SLURM_CPUS_PER_TASK --db_path=${BIND_PATH}/database.xml
+mpirun -np $SLURM_NTASKS singularity exec --bind ${BIND_PATH}:${BIND_PATH} frensie_hpc.simg python snm.py --sim_name="snm" --num_particles=5e11 --threads=$SLURM_CPUS_PER_TASK --db_path=${BIND_PATH}/database.xml
 
 # -np $SLURM_NTASKS has mpi create $SLURM_NTASKS copies of the program and MPI handles the data
 # transfering between nodes and the process 0 node 
