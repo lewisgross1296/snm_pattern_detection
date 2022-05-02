@@ -5,4 +5,4 @@
 # This is the command used to write data to CSV for each detector. This has 
 # changed to become one command and have the write script loop over estimators 
 # and entity IDS to write the results in each detector
-`./snm-write-data.py --rendezvous_file="snm_rendezvous_11.xml" --NPS="1E11" --HEU_X="25" --HEU_Y="25" --HEU_Z="25"`
+`./snm-write-data.py --rendezvous_file="snm_rendezvous_14.xml" --NPS="12E10" --HEU_X="25" --HEU_Y="25" --HEU_Z="25"`
