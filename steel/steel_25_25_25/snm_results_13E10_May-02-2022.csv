@@ -1,5 +1,5 @@
 HEU X,HEU Y,HEU Z
-25,=25,25
+25,25,25
 detector location: NE
 time bin upper bound,flux mean,flux RE
 0.1,4.03314233995e-07,0.000216839489242
