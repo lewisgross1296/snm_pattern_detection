@@ -2,7 +2,7 @@
 import sys, os
 from optparse import *
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-from snm_simulation import snmSimulation
+from snm_start_N_simulation import snmSimulationAtN
 import PyFrensie.Utility as Utility
 
 
@@ -31,7 +31,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     # Run the simulation
-    snmSimulation( options.sim_name,
+    snmSimulationAtN( options.sim_name,
                    options.db_path,
                    options.num_particles,
                    options.start_history,

@@ -19,7 +19,7 @@ import PyFrensie.Data.Native as Native
 ##---------------------------------------------------------------------------##
 ## Set up and run the simulation
 ##---------------------------------------------------------------------------##
-def snmSimulation( sim_name,
+def snmSimulationAtN( sim_name,
                    db_path,
                    num_particles,
                    start_history,
