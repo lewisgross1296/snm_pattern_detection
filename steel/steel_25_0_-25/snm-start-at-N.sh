@@ -22,5 +22,4 @@
 #BIND path to shared data in dagmc group
 BIND_PATH=/software/groups/dagmc/opt/misc/MCNP/MCNP_DATA
 module load openmpi
-mpirun -np $SLURM_NTASKS singularity exec --bind ${BIND_PATH}:${BIND_PATH} frensie_hpc_at_N.simg python snm-start-N.py --sim_name="snm_start_5e10" --num_particles=1e12 --threads=$SLURM_CPUS_PER_TASK --db_path=${BIND_PATH}/database.xml
- --start_history=5e10
+mpirun -np $SLURM_NTASKS singularity exec --bind ${BIND_PATH}:${BIND_PATH} frensie_hpc_at_N.simg python snm-start-N.py --sim_name="snm_start_5e10" --num_particles=1e12 --threads=$SLURM_CPUS_PER_TASK --db_path=${BIND_PATH}/database.xml --start_history=5e10
